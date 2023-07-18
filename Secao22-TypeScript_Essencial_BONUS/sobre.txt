@@ -1,0 +1,2 @@
+Contem trechos do curso de javascript cosniderados essenciais para react
+

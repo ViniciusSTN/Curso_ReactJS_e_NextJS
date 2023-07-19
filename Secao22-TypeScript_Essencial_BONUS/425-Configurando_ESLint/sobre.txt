@@ -1,0 +1,6 @@
+npm i eslint -D
+
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+
+criar arquivo eslintrc.js -> copiar a configuração do repositorio dele aula 422
+

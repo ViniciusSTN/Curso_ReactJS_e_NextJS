@@ -1,0 +1,7 @@
+npm init -y
+
+npm i typescript -D
+
+para executar o codigo: npx tsc <nome-do-arquivo>
+-> irá criar um novo arquivo js
+

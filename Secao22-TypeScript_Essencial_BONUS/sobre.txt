@@ -1,2 +1,2 @@
-Contem trechos do curso de javascript cosniderados essenciais para react
+Contem trechos do curso de javascript cosnsiderados essenciais para react
 

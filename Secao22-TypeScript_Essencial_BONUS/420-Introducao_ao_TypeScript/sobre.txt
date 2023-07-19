@@ -1,0 +1,7 @@
+TS complia para JS puro para rodar no browser
+
+pode escolher para qual versão do ES para compilar o código
+
+tipagen estáica
+
+

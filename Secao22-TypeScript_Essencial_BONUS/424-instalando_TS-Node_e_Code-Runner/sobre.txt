@@ -15,5 +15,5 @@ ou entao
 (ele não checa erros, mas compila mais rápido)
 
 
-obs: tudo isso é apenas para ver se o código está funcionando normalmente local, em produção não seria assim
+obs: tudo isso é apenas para ver se o código está funcionando normalmente local, em produção não seria assim.
 

@@ -1,0 +1,15 @@
+npm i prettier eslint-config-prettier eslint-plugin-prettier -D
+ 
+dentro de .eslintrc.js
+-> dentro de extends: [ "plugin:prettier/recommended", ] (adicionar essa linha)
+
+cirar arquivo .prettierrc.js
+colar:
+module.exports = {
+  'semi': true,
+  'trailingComma': 'all',
+  'singleQuote': true,
+  'printWidth': 80,
+  'tabWidth': 2,
+}
+

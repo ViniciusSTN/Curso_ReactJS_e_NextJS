@@ -1,0 +1,5 @@
+para saber mais, pesquisar: tsc compiler options
+
+npx tsc --init
+cria arquivo tsconfig.json
+

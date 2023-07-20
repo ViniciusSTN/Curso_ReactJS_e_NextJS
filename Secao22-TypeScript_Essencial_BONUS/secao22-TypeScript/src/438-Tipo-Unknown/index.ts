@@ -2,7 +2,7 @@
 // seria um any mais 'seguro'
 
 // o any permite mudar de tipos sem dar avisos
-export let x: any;
+let x: any;
 x = 10;
 x = 'Vinicius';
 x = true;
@@ -11,7 +11,7 @@ const y = 10;
 console.log(x + y);
 
 // já o unknown da um aviso
-export let a: unknown;
+let a: unknown;
 a = 10;
 a = 'Vinicius';
 a = true;

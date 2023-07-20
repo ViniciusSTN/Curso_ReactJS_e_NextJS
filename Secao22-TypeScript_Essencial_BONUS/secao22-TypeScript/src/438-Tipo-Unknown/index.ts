@@ -21,3 +21,5 @@ console.log(a + b); // funciona do mesmo jeito, apenas da um aviso
 
 // é possivel fazer uma checagem
 if (typeof a === 'number') console.log(a + b);
+
+export default 1;

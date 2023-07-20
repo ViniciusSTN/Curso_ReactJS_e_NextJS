@@ -43,3 +43,5 @@ const objD: {
 
 // não será possível atribuir outros valores
 objD.keyA = 'Sla';
+
+export default 1;

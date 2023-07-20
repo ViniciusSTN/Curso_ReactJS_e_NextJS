@@ -34,3 +34,5 @@ console.log(clientData3);
 const array: readonly string[] = ['Vinicius', 'Santana'];
 const array2: ReadonlyArray<string> = ['Vinicius', 'Santana'];
 console.log(array, array2);
+
+export default 1;

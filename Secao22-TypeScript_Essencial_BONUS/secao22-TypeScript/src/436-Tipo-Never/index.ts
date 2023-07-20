@@ -5,3 +5,5 @@ function criaErro(): never {
   throw new Error('Erro qualquer');
 }
 criaErro();
+
+export default 1;

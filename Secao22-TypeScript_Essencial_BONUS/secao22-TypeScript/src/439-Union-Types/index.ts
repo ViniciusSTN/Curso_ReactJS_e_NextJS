@@ -8,3 +8,5 @@ console.log(addOrConcat(10, 20));
 console.log(addOrConcat('10', '20'));
 console.log(addOrConcat(10, '20'));
 console.log(addOrConcat('10', 20));
+
+export default 1;

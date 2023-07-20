@@ -32,3 +32,5 @@ function squareOf(x: any) {
 }
 console.log(squareOf('2')); // null
 console.log(squareOf(2)); // 4
+
+export default 1;

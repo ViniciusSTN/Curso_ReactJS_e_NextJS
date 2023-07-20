@@ -41,3 +41,5 @@ function sum2(x: number, y: number) {
 }
 // ou então define os tipos de entrada e saída antes de informar os parâmetros
 const sum3: (x: number, y: number) => number = (x, y) => x + y;
+
+export default 1;

@@ -16,3 +16,5 @@ export const person = {
 };
 
 person.showName();
+
+export default 1;

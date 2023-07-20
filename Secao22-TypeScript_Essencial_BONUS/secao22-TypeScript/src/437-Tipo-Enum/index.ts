@@ -54,3 +54,5 @@ function chooseColor(color: Cores3): void {
 }
 chooseColor(Cores3.VERMELHO);
 chooseColor(123123); // undefined -> o ideal era retornar um erro por segurança
+
+export default 1;

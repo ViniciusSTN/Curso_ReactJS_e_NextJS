@@ -7,3 +7,5 @@ function showMessage(msg: any) {
 
 showMessage('sla');
 showMessage(10);
+
+export default 1;

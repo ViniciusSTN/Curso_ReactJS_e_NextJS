@@ -20,3 +20,5 @@ function uCase(...args: string[]): string[] {
 }
 const result3 = uCase('a', 'b', 'c');
 console.log(result3);
+
+export default 1;

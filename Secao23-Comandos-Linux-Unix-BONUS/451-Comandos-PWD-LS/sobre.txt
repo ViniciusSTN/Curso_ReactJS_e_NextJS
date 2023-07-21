@@ -1,0 +1,14 @@
+pwd - print working directory (mostra o caminho do diretório atual)
+ls - lista tudo no diretório atual
+  -a - inclui entradas que o nome começa com ponto (arquivos ou diretórios ocultos)
+  -l - lista em formato longo
+  -h - é um sufixo de tamanho para facilitar a leitura do tamanho do arquivo
+  -@ - mostra atributos estendidos
+
+se escrever o nome do diretório ou arquivo na frente -> lista apenas ele
+ex: ls -lh Referencia
+
+open . -> abre a pasta atual
+
+Video de usuarios e permissões linux
+https://www.youtube.com/watch?v=S2h92LNcEz8

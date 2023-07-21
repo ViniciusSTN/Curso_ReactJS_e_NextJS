@@ -1,0 +1,26 @@
+cd - change directory
+  . - diretório atual
+  .. - diretório acima
+  / - o diretório root ou a separação de diretórios
+  ~ - home (cd sem nada vai para a home)
+  - menos - volta para o diretório que anterior
+tree - mostra a árvore do diretório atual
+  -d - diretórios
+  -a - mostra arquivos ocultos
+cat - concatena e/ou mostra o conteúdo de um arquivo
+  -n - enumera as linhas
+tail - lista as últimas linhas do arquivo
+  -NÚMERO - mostra a quantidade de linhas que for adicionado em NÚMERO.
+  -f - continua assistindo o arquivo em busca de novos dados.
+wc - conta linhas, palavras e caracteres
+  -l - linhas
+  -m - caracteres
+  -w - palavras
+
+
+sudo apt install tree
+
+// criar arquivo
+touch nomedoarquivo.txt
+ou 
+nano nomedoarquivo.txt

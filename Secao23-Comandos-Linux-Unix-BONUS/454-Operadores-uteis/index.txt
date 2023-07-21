@@ -1,0 +1,26 @@
+; - permite executar vários comandos na mesma linha. Roda todos os comandos, mesmo se ocorrer     algum erro.
+
+&& - permite executar vários comandos na mesma linha. Se o comando anterior não gerar nenhum erro, continua a corrente de comandos, do contrário, para no momento que ocorrer um erro.
+
+|| - permite executar vários comandos na mesma linha. Ele funciona de maneira oposta ao anterior, ou seja, se ocorrer algum erro no comando anterior, executa o próximo comando, do contrário, para no primeiro comando que NÃO gerar um erro.
+
+| - Joga a saída (output) de um comando para a entrada (input) de outro.
+
+> - Joga a saída de um comando e redireciona para um arquivo. Apaga o arquivo todo e substitui seu conteúdo.
+
+>> - Joga a saída de um comando e redireciona para um arquivo. Não apaga o que estiver no arquivo, apenas adiciona o novo conteúdo na última linha.
+
+& - Joga para o background. Veja jobs e fg para complementar
+
+
+
+// executa varios comandos independente se o anterior der erro
+mkdir -p diretorio/a/b/c ; tree diretorio ; echo 123
+
+// se um der erro para de executar a cadeia
+mkdir -p diretorio/a/b/c && tree diretorio && echo 123
+
+// só executa o proximo se o anterior der erro
+mkdir -p diretorio/a/b/c || tree diretorio || echo 123
+
+ls | grep "a"  -> lista todos os arquivos e diretorios (ls) -> joga a saida desse comando para a entrada do próximo (|) -> busca todos os arquivos e diretorios que tem a letra "a" (grep "a")

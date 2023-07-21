@@ -1,0 +1,21 @@
+jobs - mostra trabalhos em execução
+
+fg %n - leva o que estiver em background para o foreground (n = numero referente ao job)
+obs: para jogar de volta para background ctrl + z
+
+bg %n - continua um job em background
+
+kill %n - mata um job
+
+
+
+
+sleep 3000 &  -> espera por 3000 segundos no background
+
+kill -l  -> opções de kill, espécie de kill --help (já que ele não possui ajuda)
+
+kill -TSTP %1  -> pausa o job 1
+
+kill -QUIT %1  -> sai do job 1
+
+bg %1  -> continua o job 1

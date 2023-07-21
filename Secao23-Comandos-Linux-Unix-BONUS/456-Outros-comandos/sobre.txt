@@ -1,0 +1,23 @@
+nano - editor de textos
+
+file - mostra o tipo do arquivo
+
+history - histórico de comandos já digitados
+
+pkill - mata processos
+
+whoami - mostra seu usuário
+
+hostname - mostra o nome do seu computador
+
+uname - mostra dados sobre o sistema
+
+ps aux - mostra todos os processos rodando no sistema no momento da execução
+
+
+
+history | grep "commit" -> listar todos os comandos com "commit" no histórico
+
+ps aux | grep "Photoshop"  -> listar processos executando que possui nome Photoshop
+
+pkill -f "Photoshop"  -> matar o Photoshop -> precisa ser o nome exato do processo de execução, por isso é importante executar o codigo acima antes

@@ -1,0 +1,21 @@
+cp - copia arquivos ou diretórios
+  -R - copia o diretório em modo recursivo
+  Obs.: Segundo o man (manual) do cp, se tiver uma barra (/) no final do diretório original, cp pode copiar apenas o conteúdo do diretório e não o diretório em si (eu não vi isso ocorrer em testes).
+mv - move arquivos ou diretórios (com mv você pode renomear arquivos ou diretórios)
+mkdir - cria um diretório (use aspas ou barra invertida para separar caracteres inválidos)
+  -p - cria uma estrutura inteira sem gerar erros
+  Obs.: você pode usar chaves para criar múltiplos sub-diretórios.
+rm - apaga arquivos e diretórios
+  -R - modo recursivo para diretórios
+  -f - modo forçado e silencioso
+touch - muda os tempos de acesso e modificação de um arquivo. Grande parte dos casos, usamos este comando para criar um arquivo vazio.
+
+* -> tudo
+ex: ls *.txt -> lista tudo que for .txt
+
+para copiar a pasta inteira (junto com subpastas):
+cp -R pasta novapasta
+
+mkdir -p pasta/a/b/c/{d,e,f} -> cria um diretorio dentro do outro (d, e, f estão no mesmo nível)
+
+

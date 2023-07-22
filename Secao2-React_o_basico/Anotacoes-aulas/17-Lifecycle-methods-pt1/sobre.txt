@@ -1,0 +1,9 @@
+https://legacy.reactjs.org/docs/state-and-lifecycle.html
+
+https://legacy.reactjs.org/docs/react-component.html#componentdidupdate
+
+componentDidMount() -> montado
+
+componentDidUpdate() -> atualizado
+
+componentWillUnmount() -> desmontado

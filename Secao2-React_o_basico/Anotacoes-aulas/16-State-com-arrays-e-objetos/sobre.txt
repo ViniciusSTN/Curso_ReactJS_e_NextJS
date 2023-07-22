@@ -1,2 +1,2 @@
-
+sempre que retornar varios elementos usando map ou algo parecido é preciso informar uma key única para cada elemento no elemento pai
 

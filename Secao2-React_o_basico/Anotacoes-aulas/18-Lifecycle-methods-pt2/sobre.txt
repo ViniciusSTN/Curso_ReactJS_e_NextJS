@@ -1,0 +1,5 @@
+diagrama de ciclo de vida de componentes
+react 16
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+

@@ -1,0 +1,25 @@
+Fetch_API
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+// poderia usar o axios por exemplo
+
+
+// consumir api json placeholder api: 
+https://jsonplaceholder.typicode.com
+
+
+
+css:
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.post {
+  transition: transform 100ms ease-in-out;
+}
+
+.post:hover {
+  transform: scale(1.03);
+}

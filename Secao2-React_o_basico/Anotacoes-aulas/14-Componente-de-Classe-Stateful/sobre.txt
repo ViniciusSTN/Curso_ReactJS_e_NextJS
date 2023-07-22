@@ -1,0 +1,8 @@
+Stateful -> com estado
+
+estado é os dados que o componente utiliza
+
+mudanças de estados fazem com que o componente atualize
+
+evento sintético -> ex: onClick
+

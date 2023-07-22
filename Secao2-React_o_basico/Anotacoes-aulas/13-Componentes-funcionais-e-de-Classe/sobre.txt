@@ -1,0 +1,5 @@
+existem componentes de estado e sem estado
+
+Stateful -> com estado
+Stateless -> sem estado
+

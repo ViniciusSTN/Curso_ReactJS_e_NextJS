@@ -1,0 +1,3 @@
+componentizar a aplicação
+
+o state só pode descer/passar para baixo (para elementos filhos)

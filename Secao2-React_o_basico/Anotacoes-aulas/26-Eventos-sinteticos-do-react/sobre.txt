@@ -1,0 +1,6 @@
+eventos sinteticos sao criados pelo proprio react e são parecidos com os eventos do DOM 
+
+não é preciso usar addEventListener
+
+https://legacy.reactjs.org/docs/events.html
+

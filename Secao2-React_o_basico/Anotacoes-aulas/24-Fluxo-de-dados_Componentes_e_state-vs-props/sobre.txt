@@ -1,0 +1,14 @@
+Aula sem codigos
+
+sempre que puder quebrar em varios componentes, fazer
+
+facilita para fazer testes
+
+pensar na reutilização dos componentes
+
+o fluxo de dados é sempre para frente
+
+não é possivel voltar o estado para o componente pai, somente para frente, seguindo o fluxo de dados
+
+somente será possivel que qualquer componente utilize um estado global quando estudarmos redux e context api
+

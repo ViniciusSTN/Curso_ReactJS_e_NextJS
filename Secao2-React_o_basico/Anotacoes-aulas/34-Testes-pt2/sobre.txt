@@ -1,0 +1,11 @@
+para executar
+npm test
+
+spec => teste unitario
+
+quando não sei se tudo foi testado:
+npm test -- --coverage
+cria uma pasta
+
+abrir arquivo no navegador
+/coverage/lcov-report/index.html

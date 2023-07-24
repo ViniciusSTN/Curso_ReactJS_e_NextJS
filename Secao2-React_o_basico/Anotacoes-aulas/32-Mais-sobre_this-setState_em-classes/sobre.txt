@@ -1,0 +1,7 @@
+explicação do console.log(this.state.counter);
+
+-> Virtual DOM: quando um componente é renderizado no código, o react faz uma cópia do DOM para o virtual DOM ro react
+-> quando o novo estado é setado, o react compara o Virtual DOM com o DOM do navegador e analisa onde está a diferença em todos os elementos para depois atualizar a DOM do navegador e mostrar na tela
+-> isso tudo é feito de forma assincrona, por isso para usar o estado dentro da função depois de atualizá-lo, é preciso passar uma função de callback (this.setState aceita uma função de callBack)
+
+com Hooks é um pouco diferente

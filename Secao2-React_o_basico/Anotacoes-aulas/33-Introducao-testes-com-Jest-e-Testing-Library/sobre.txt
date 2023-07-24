@@ -1,0 +1,11 @@
+teste unitários
+
+mock -> ex: função que chama o BD -> criar um outro codigo para simular que está chamando o BD
+
+padrão do create react app
+jest-DOM
+
+https://github.com/testing-library/jest-dom
+
+https://github.com/sapegin/jest-cheat-sheet
+

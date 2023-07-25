@@ -1,0 +1,4 @@
+Mock service worker
+https://mswjs.io/
+
+npm i -D msw

@@ -1,0 +1,1 @@
+snapshot: tirar uma foto do componente, para comparar quando enviar para produção ou fazer alterações depois

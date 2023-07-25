@@ -1,0 +1,30 @@
+npx eslint --init
+
+remover (em dev-dependeces):
+"eslint": "^8.45.0",        // as vezes da conflito com react
+// react já tem eslint
+
+apagar package-lock.json e node_modules
+
+npm i
+
+copiar arquivo .eslintconfig nos arquivos da aula
+
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+
+instalar extensão editor config e extensão eslint
+
+criar arquivo .editorconfig
+
+settings.json:
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true,
+  "source.fixAll": true
+},
+
+copiar arquivo prettier do codigo da aula
+
+para corrigir todos os arquivos de todas as pastas:
+npx eslint src/**/*.jsx --fix
+
+npm i prop-types

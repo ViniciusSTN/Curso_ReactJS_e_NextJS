@@ -1,0 +1,18 @@
+olhar codigo de App2
+
+useMemo() -> usado para memorizar
+useMemo() e React.memo() são parecidos
+
+useMemo(calculateValue, dependencies)
+memo(Component, arePropsEqual?)
+
+useMemo() é usado para memorizar o resultado de uma função computacionalmente intensiva.
+
+React.memo() é usado para memorizar a renderização de um componente funcional e evita que ele seja renderizado novamente, a menos que suas props sejam alteradas.
+
+
+pelo que vi é mais recomendável usar memo na criação do componente do que useMemo na chamada dele
+
+
+não otimizar o codigo de forma prematura, ou seja, somente otimizar se tiver um problema
+

@@ -1,0 +1,33 @@
+useCallback -> usado em otimizações (em funções pesadas)
+
+quando um comonente renderiza, a função inteira é executada novamente, difente de componentes de classe que somente o o método render() é executado
+
+-> sabendo disso, é importante usar useCallback somente em casos que a função é muito pesada, pois o useCallback tem um certo peso
+
+// ------------------------------------------
+memo
+
+Envolva um componente memopara obter uma versão memorizada desse componente. Esta versão memorizada de seu componente geralmente não será renderizada novamente quando seu componente pai for renderizado novamente, desde que seus props não tenham mudado. Mas o React ainda pode renderizá-lo novamente: a memoização é uma otimização de desempenho, não uma garantia.
+
+retorna um comonente memorizado
+
+Parâmetros
+Component: O componente que você deseja memorizar. O memonão modifica este componente, mas retorna um novo componente memorizado. Qualquer componente React válido, incluindo funções e forwardRefcomponentes, é aceito.
+
+opcional arePropsEqual : Uma função que aceita dois argumentos: as props anteriores do componente e suas novas props. Ele deve retornar truese as props antigas e novas forem iguais: ou seja, se o componente renderizar a mesma saída e se comportar da mesma forma com as novas props e com as antigas. Caso contrário, ele deve retornar false. Normalmente, você não especificará esta função. Por padrão, o React irá comparar cada prop com Object.is.
+
+// ------------------------------------------
+
+useCallback
+
+armazena em cache uma definição de função entre as novas renderizações
+// evita que a função seja recriada em cada renderização, guardando na memória e otimizando o desempenho
+
+// evita que a função seja recriada em cada renderização, guardando na memória e otimizando o desempenho
+// obs: não é uma garantia, para isso nenhuma dependencia deve ser alterada
+// nesse caso se tivessemos passado counter como dependencia e dentro de seCounter usar o counter para somar o número, isso atualizará a dependencia e a função será criada novamente no proxima renderização, ocasionando em perda de eficiência
+// mas se uma dependencia tiver sido passada e não atualizada, a função não será recriada ao re-renderizar o componente
+
+const incrementCounter = useCallback((num) => {
+  setCounter((prevState) => prevState + num);
+}, []);

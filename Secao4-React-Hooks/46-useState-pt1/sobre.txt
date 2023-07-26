@@ -1,0 +1,4 @@
+useStete() -> setar o estado de algum elemento
+recebe o valor inicial como parâmetro
+
+a partir de um evento sintético o estado pode ser alterado

@@ -1,0 +1,29 @@
+IMPORTANTE: nunca usar hooks dentro de blocos, ex: condicionais
+
+
+useEffect é usado para fazer a função dos life cicle methods de class components
+
+por padrão toda vez que o componente atualizar useEffect é chamado
+a não ser que seja passado alguma dependencia [] para que a função seja chamada
+
+// componentDidUpdate
+useEffect(() => {
+  console.log('componentDidUpdate');
+});
+
+// componentDidMount
+useEffect(() => {
+  console.log('componentDidUpdate');
+}, []);
+
+// componentDidUpdate com dependencia
+// toda vez que o estado de counter for atualizado, useEffect será chamado
+// todo elemento de estado que seja usado dentro da função deve ser passado como dependência de useEffect
+useEffect(() => {
+  console.log('contador mudou para: ', counter);
+}, [counter]);
+
+
+// tomar cuidado com loop infinito
+
+// ao colocar return () => {} dentro de useEffect, funcionará como um componentWillUmount -> quando o componente é desmontado, util para limpar lixos

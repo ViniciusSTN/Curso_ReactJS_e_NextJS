@@ -1,0 +1,3 @@
+useRef -> pegar referencia de algum elemento ou valor
+
+algo similar ao querySelector ou getElement, mas é recomendavel usar useRef

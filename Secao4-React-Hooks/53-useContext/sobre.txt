@@ -1,0 +1,9 @@
+useContext
+
+não é viavel ficar passando props para varios componentes até chegar em um específico para ser usado
+
+ideal ter um estado global
+
+o estado pode ser alterado em qualquer local da arvore de componentes que estejam em GlobalContext.Provider e a mudança de estado reflete nos outros componentes
+
+useReducer é usado para lidar com estados mais complexos

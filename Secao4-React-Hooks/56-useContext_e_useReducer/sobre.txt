@@ -1,0 +1,3 @@
+o contexto normalmente é usado com useReducer
+
+é possivel ter um contexto pai ou irmão de outro contexto

@@ -1,0 +1,3 @@
+abortar uma requisição usando AbortController()
+
+gabriel falou que nunca precisou fazer isso, então fodase kkkkj

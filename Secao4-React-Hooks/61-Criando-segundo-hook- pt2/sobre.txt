@@ -1,0 +1,1 @@
+useRef() -> armazena em memoria a primeira referencia informada, não altera mesmo se sofrer outras renderizações

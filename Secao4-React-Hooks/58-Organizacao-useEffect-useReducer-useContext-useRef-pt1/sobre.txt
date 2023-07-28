@@ -1,0 +1,4 @@
+quando trabalha com redux, a pasta contexts se torna a pasta store
+
+actions podem ser separadas por varios arquivos
+exemplo de action: carregar post sucesso, erro, carregando

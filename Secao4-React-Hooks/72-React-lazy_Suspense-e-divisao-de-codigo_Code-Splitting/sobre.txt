@@ -1,0 +1,6 @@
+geralmente quando a aplicação tiver muito grande e precisar fazer otimização
+
+https://legacy.reactjs.org/docs/code-splitting.html
+OBS: legado
+
+quando o usuario entra no pagina, todo o codigo da pagina é baixado, incluindo componentes que não estão ainda na página

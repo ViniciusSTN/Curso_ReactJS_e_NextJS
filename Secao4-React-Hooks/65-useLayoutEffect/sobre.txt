@@ -1,0 +1,5 @@
+provavelmente não usará
+
+funciona como o useEffect
+
+se tiver fazendo manipulação no DOM e não tiver sincronizado, é possível usar useLayputEffect

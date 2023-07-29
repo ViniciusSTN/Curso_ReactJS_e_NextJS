@@ -1,0 +1,1 @@
+agora pode ter outros elementos dentro do componente home sem gerar erros, por conta do useContext

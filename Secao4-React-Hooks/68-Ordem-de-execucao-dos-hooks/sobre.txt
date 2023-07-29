@@ -1,0 +1,1 @@
+se tiver varios useEffect, tem ordem de execução -> a ordem será a que está no código

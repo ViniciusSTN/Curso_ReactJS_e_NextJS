@@ -1,0 +1,18 @@
+se acontecer um erro, não quebra a pagina inteira, somente o componte que apresentou erro
+
+https://pt-br.legacy.reactjs.org/docs/error-boundaries.html
+OBS: LEGADO
+
+Nota
+
+Error boundaries não capturam erros em:
+
+Manipuladores de evento (saiba mais)
+Código assíncrono (ex. callbacks de setTimeout ou requestAnimationFrame)
+Renderização no servidor
+Erros lançados na própria error boundary (ao invés de em seus filhos)
+
+
+
+nova referencia
+https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary

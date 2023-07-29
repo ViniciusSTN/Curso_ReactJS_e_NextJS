@@ -1,0 +1,5 @@
+Não recomendável usar
+
+forwardRef permite passar referencia como parâmetro para componente filho
+
+useImperativeHandle permite passar propriedades do componente filho para o componente pai quando o componente filho é passado por referencia do forwardRef

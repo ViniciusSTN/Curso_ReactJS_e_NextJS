@@ -1,0 +1,16 @@
+/abc/:slug   -> a rota abc só vai carregar se tiver um parâmetro
+/abc/:slug?  -> parâmetro não é requerido (slug = undefined)
+
+/abc/:slug?/:id?    http://localhost:3000/abc/slug-do-post/123
+
+
+
+Concatena
+<Route path="/abc/:slug&:id" component={Abc} exact />
+    http://localhost:3000/abc/slug-do-post&123
+
+
+
+Divide por /
+<Route path="/abc/:slug/:id" component={Abc} exact />
+   http://localhost:3000/abc/slug-do-post/123

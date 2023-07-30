@@ -1,5 +1,7 @@
 import P from 'prop-types';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useReducer, useRef } from 'react';
+import { buildActions } from './build-actions';
+import { reducer } from './reducer';
 
 export const initialState = {
   counter: 0,
@@ -9,10 +11,13 @@ export const initialState = {
 const Context = createContext();
 
 export const CounterContextProvider = ({ children }) => {
-  const [state, dispatch] = useState(initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const actions = useRef(buildActions(dispatch)); // resolver problema do loop
 
   return (
-    <Context.Provider value={[state, dispatch]}>{children}</Context.Provider>
+    <Context.Provider value={[state, actions.current]}>
+      {children}
+    </Context.Provider>
   );
 };
 

@@ -1,1 +1,29 @@
-nesse caso é necessário envolver o componente Home em CounterContextProvider em ./src/index.jsx
+o dispatch é protegido -> garantido que vai ser uma função estável (não muda durante as renderizações do componente)
+entretando o buildActions que criamos não, ou seja, se disparar uma actions dentro de um useEffect, termos que passar actions como dependência, gerando um loop pois quando o estado é alterado as função serão recriadas
+
+ex:
+const [state, actions] = useCounterContext();
+
+useEffect (() => {
+  actions.increase();
+}, [actions])               // gera um loop
+
+
+
+para resolver isso, é possivel criar um state para actions, pois a função useState só é executada uma vez (quando o componente renderiza pela primeira vez)
+
+ex:
+const [state, actions] = useCounterContext();
+const [actionsState] = useState(actions); // Executa apenas uma vez (na primeira renderização do componente)
+
+useEffect(() => {
+  actionsState.increase();
+}, [actionsState]);
+
+
+
+// outra solução
+envolver o buildActions em um useRef (olhar código de /CounterContextProvider/index.jsx)
+
+
+nesse caso tanto faz a solução que escolher

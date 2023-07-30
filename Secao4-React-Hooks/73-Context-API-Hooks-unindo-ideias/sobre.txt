@@ -1,0 +1,1 @@
+nesse caso é necessário envolver o componente Home em CounterContextProvider em ./src/index.jsx

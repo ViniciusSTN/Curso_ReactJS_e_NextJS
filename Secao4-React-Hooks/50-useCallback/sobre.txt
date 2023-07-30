@@ -1,6 +1,6 @@
 useCallback -> usado em otimizações (em funções pesadas)
 
-quando um comonente renderiza, a função inteira é executada novamente, difente de componentes de classe que somente o o método render() é executado
+quando um componente renderiza, a função inteira é executada novamente, difente de componentes de classe que somente o o método render() é executado
 
 -> sabendo disso, é importante usar useCallback somente em casos que a função é muito pesada, pois o useCallback tem um certo peso
 

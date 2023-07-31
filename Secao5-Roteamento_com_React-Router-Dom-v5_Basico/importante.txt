@@ -1,0 +1,62 @@
+sobre o react-router-dom-v6
+
+
+Pessoal, como descrevi no começo da seção, atualmente o React Router Dom está na versão v6. Quando gravei essa seção, a versão atual era a v5.
+
+Infelizmente, existem coisas que são completamente diferentes nessa versão.
+
+Além disso, o React hoje tem a versão 18, que também é uma nova versão com algumas coisas diferentes.
+
+Se você fosse usar o React 18 com o React Router Dom v6, o seu index.jsx ficaria assim:
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { App } from './templates/App';
+import { Menu } from './components/Menu';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Abc } from './templates/Abc';
+import { Page404 } from './templates/Page404';
+ 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+ 
+root.render(
+  <BrowserRouter>
+    <Menu />
+    <Routes>
+      <Route index path="/" element={<App />} />
+      <Route path="/abc/:slug/:id" element={<Abc />} />
+      <Route path="/abc/:slug" element={<Abc />} />
+      <Route path="/abc/" element={<Abc />} />
+      <Route path="*" element={<Page404 />} />
+    </Routes>
+  </BrowserRouter>,
+);
+O useHistory não existe mais na versão nova do React Router Dom, no seu lugar use o hook "useNavigate".
+
+Exemplo:
+
+import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+ 
+export const Abc = () => {
+  const { slug, id } = useParams();
+  const navigate = useNavigate();
+ 
+  useEffect(() => {
+    // Em 5 segundos seremos redirecionados para a / (App)
+    setTimeout(() => {
+      navigate('/');
+    }, 5000);
+  }, [navigate]);
+ 
+  return (
+    <div>
+      <h1>
+        ABC {slug} {id}
+      </h1>
+    </div>
+  );
+};
+
+Nas seções posteriores, as aulas não foram atualizadas para o React 18 ou React Router Dom v6.

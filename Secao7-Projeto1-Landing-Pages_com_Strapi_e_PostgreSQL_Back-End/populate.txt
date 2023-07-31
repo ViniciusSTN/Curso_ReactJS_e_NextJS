@@ -1,0 +1,63 @@
+Na versão atual do Strapi (v4) o formato da API é completamente diferente.
+
+URL da API
+Um ponto importante é adicionar "api" na URL. Por exemplo, ao invés de:
+
+http://localhost:1337/pages
+Adicione "api":
+
+http://localhost:1337/api/pages
+Populate (Plugin)
+Outro ponto importante é que Dynamic Zones e componentes não são populados automaticamente, por isso teremos que informar ao Strapi como fazer isso.
+
+Eu vou usar um plugin chamado "strapi-plugin-populate-deep". Isso vai deixar as coisas muito mais simples. Simplesmente instale o plugin:
+
+npm install strapi-plugin-populate-deep
+
+E nas URLs onde tu quiser popular os valores, adicione o seguinte:
+
+http://localhost:1337/api/pages?populate=deep
+
+Isso garantirá que todas as dynamic zones e components serão populados com valores.
+
+Se quiser algo mais fragmentado, leia a seguir.
+
+// -----------------------------------------------
+Populate (nativo) e Paginação:
+
+Para algo nativo do Strapi, podemos fazer via código ou via URL. Veja como fazer "populate" via URL.
+
+Por exemplo, para popular nossas "sections", use:
+
+http://localhost:1337/api/pages?populate[sections][populate]=*
+
+Para paginação, use pagination[page] e pagination[pageSize]:
+
+http://localhost:1337/api/pages?populate[sections][populate]=*&pagination[page]=1&pagination[pageSize]=10
+
+A URL acima está na página 1, o número de elementos por página é 10.
+
+Para ordenação, use sort[índice]=campo:asc ou desc. Veja:
+
+http://localhost:1337/api/pages?populate[sections][populate]=*&pagination[page]=1&pagination[pageSize]=1&sort[0]=id:desc
+
+A URL acima usa o índice 0 (primeiro campo usado para ordenação), o campo é o ID, o formato é decrescente (sort[0]=id:desc).
+
+// ---------------------------------------------------
+
+Minha URL final para obter os dados:
+
+Como vou usar o plugin indicado anteriormente, minha URL vai ficar bem simples para popular os dados. Eu só preciso alterar a paginação. Veja:
+
+________________________________________________________________
+http://localhost:1337/api/pages?populate=deep&pagination[pageSize]=1&sort[0]=id:desc
+________________________________________________________________
+
+Caso queira seguir como estou fazendo, a URL acima é a mesma que estou usando daqui em diante.
+
+Leia mais na documentação
+Mais dados sobre isso em: 
+
+https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest-api.html
+
+Outras atualizações virão ao longo das aulas. Agradeço a compreensão.

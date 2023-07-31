@@ -63,5 +63,11 @@ ligar servidor com npm run develop e enviar uma imagem no strapidashbord
 
 agora os arquivos enviados não vão mais para a pasta uploads, vai para o cloudnary e quando a api precisar usar a imagem, fará uma busca no cloudnary
 
+// --------------------------------------------------------
+http://localhost:1337/api/pages
+
+dynamic zones e componentes não são populados automaticamente, por isso temos que informar ao strapi para fazer isso (LER POPULATE.TXT)
+
+http://localhost:1337/api/pages/1/?populate[menu][populate]=*&populate[sections][populate]=*
 
 

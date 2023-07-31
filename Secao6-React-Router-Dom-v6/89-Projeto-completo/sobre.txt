@@ -1,0 +1,28 @@
+npm i react-router-dom
+
+params agora por padrão é um objeto vazio e não undefined como era no react-router-dom v5
+
+agora Routes organiza por especifidade de url, não é mais necessário colocar na ordem 'certa' os Route
+
+hooks:
+useParams()
+useSearchParams()  -> query string
+
+
+O ponto de interrogação na URL é usado para indicar o início da query string (cadeia de consulta). A query string é uma parte da URL que permite passar parâmetros ou informações adicionais para o servidor web ao qual a solicitação está sendo feita.
+
+
+-> testar: http://localhost:3000/posts/10?page=100
+
+const [qs, setQs] = useSearchParams();
+
+é possivel usar get em qs e informar qual a query string, será retornado o valor
+nesse caso retorna 100
+Post | {`Param: ${id}`} | {`Query string: ${qs.get('page')}`}
+
+Nesse caso retora a query string inteira
+Post | {`Param: ${id}`} | {`Query string: ${qs}`}
+
+
+é possivel passar várias query strings
+-> testar: http://localhost:3000/posts/10?page=100&segundo=valor

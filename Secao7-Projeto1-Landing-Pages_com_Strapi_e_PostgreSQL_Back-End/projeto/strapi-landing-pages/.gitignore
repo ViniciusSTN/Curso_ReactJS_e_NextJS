@@ -106,7 +106,7 @@ coverage
 # Strapi
 ############################
 
-.env
+.envEDITAR-ANTES-DO-DEPLOY
 license.txt
 exports
 *.cache

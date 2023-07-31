@@ -1,0 +1,4 @@
+<Route path="*" component={Page404} />
+
+a href="" -> full reload
+Link to="" -> faz reload apenas de componentes necessários (bom para aproveitar componentes como header por exemplo)

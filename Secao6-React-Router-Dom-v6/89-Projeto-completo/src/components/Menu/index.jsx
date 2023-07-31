@@ -6,7 +6,9 @@ export const Menu = () => {
     <nav>
       <ul>
         <li>
-          <Link to={'/'}>Home</Link>
+          <Link to={'/'} state={'This is state from Home'}>
+            Home
+          </Link>
         </li>
         <li>
           <Link to={'/about'}>About</Link>
@@ -16,6 +18,9 @@ export const Menu = () => {
         </li>
         <li>
           <Link to={'/posts/10'}>Post 10</Link>
+        </li>
+        <li>
+          <Link to={'/redirect'}>Redirect</Link>
         </li>
       </ul>
     </nav>

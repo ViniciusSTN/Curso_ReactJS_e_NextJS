@@ -1,4 +1,4 @@
-import { useParams, useSearchParams } from 'react-router-dom';
+import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
 export const Posts = () => {
   const params = useParams();
@@ -15,6 +15,7 @@ export const Posts = () => {
         {/* é possivel usar get em qs e informar qual a query string, será retornado o valor nesse caso retorna 2 */}
         Post | {`Param: ${id}`} | {`Query string: ${qs.get('segundo')}`}
       </h1>
+      <Outlet />
     </div>
   );
 };

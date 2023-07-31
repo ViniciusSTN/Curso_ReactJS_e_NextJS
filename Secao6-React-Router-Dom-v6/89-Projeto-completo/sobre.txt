@@ -26,3 +26,44 @@ Post | {`Param: ${id}`} | {`Query string: ${qs}`}
 
 é possivel passar várias query strings
 -> testar: http://localhost:3000/posts/10?page=100&segundo=valor
+
+
+
+useHistory não existe mais, agora é:
+navigate = useNavigate()
+navigate('/');
+
+
+
+É possivel aninhar rotas (colcoar uma dentro da outra)
+exemplo:
+
+antes:
+<Route path={'/posts/:id'} element={<Posts />} />
+<Route path={'/posts'} element={<Posts />} />
+
+depois:
+<Route path={'/posts'} element={<Posts />}>
+  <Route path=":id" element={<Post />} />
+</Route>
+
+OBS: é preciso adicionar <Outlet /> dentro de Posts
+
+
+
+
+// navigate pode receber um objeto
+// exemplo: replace -> troca o link ao invés de fazer um push, util para quando o usuario clicar em voltar não cair na página que o redirecionou
+
+navigate('/', {
+  state: `This is the state: ${Math.random()}`,
+});
+
+para receber esse estado (dentro da home):
+const location = useLocation();
+const { state } = location;
+
+
+é possivel passar também o estado dentro do link (olhar código do Menu)
+
+OBS: é melhor usar redux para gerenciar o estado

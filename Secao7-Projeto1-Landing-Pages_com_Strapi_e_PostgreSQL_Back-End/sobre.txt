@@ -1,0 +1,67 @@
+headless cms (sistema de gerenciamento de conteúdo headless)
+
+strapi v4 -> gerenciador de contudo (CMS) 
+outros gerenciadores de conteudo -> express; jungle
+
+a diferença é que strapi é só para BE
+
+
+Postgresql
+de forma gratuita -> ElephantSQL -> serviço tiny turtle 20mb data
+
+
+https://customer.elephantsql.com/instance
+
+https://cloudinary.com/
+
+https://www.heroku.com/
+Chave de segurança #1
+celular
+
+// --------------------------------------------------------
+
+npx create-strapi-app
+
+custom
+JS
+postgres
+napdktvj    (User & Default database em ElephantSQL)
+silly.db.elephantsql.com   (server host)
+5432  (porta padrão do postgre)
+napdktvj     (User & Default database em ElephantSQL)
+password do ElephantSQL
+y
+
+dentro da pasta do projeto
+npm run develop    -> vai dar erro por causa do elephant
+
+alterar config/database.js
+copiar codigo do repositorio da aula fds
+
+npm run develop
+
+cadastrar na aba que abrir no navegador
+
+http://localhost:1337/admin/plugins/content-type-builder/content-types/plugin::users-permissions.user
+
+// --------------------------------------------------------
+
+o motivo de usar cloudinary é porque o heroku desliga o servidor e quando é iniciado novamente ele deleta os arquivos de upload
+
+para resilver isso é usado um cdn (content delivery network)
+ex: cloudnary -> gratuito
+
+para configurar:
+https://github.com/strapi/strapi/tree/main/packages/providers/upload-cloudinary
+
+npm install @strapi/provider-upload-cloudinary --save
+criar arquivo plugins.js e colar o codigo do github
+trocar strapi::security em middlewares por codigo do github
+adicionar dados do dashbord da cloudnary no .env
+
+ligar servidor com npm run develop e enviar uma imagem no strapidashbord
+
+agora os arquivos enviados não vão mais para a pasta uploads, vai para o cloudnary e quando a api precisar usar a imagem, fará uma busca no cloudnary
+
+
+

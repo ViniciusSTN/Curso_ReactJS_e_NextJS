@@ -1,0 +1,84 @@
+// é possivel fazer uma função que retorna estilos css do theme dentro de um componente
+
+const changeBackground = (theme) => css`
+  background: ${({ theme }) => theme.colors.mediumGray};
+  color: #fff;
+`;
+
+export const Container = styled.div`
+  ${({ theme }) => css`
+    ${changeBackground(theme)}
+  `}
+`;
+
+//-----------------------------------------------------------------
+
+// ou então atribuir diretamente
+
+export const Container2 = styled.div`
+  background: ${({ theme }) => theme.colors.cyan};
+
+  ${({ theme }) => css`
+    color: ${theme.colors.green}
+  `}
+`;
+
+//-----------------------------------------------------------------
+
+// também é possivel passar props dentro do componente
+
+<Container2 padd="10px">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+</Container2>
+
+
+// e recuperar essa props dentro do objeto props no styled component 
+
+export const Container2 = styled.div`
+  ${({ theme, padd }) => css`
+    color: ${theme.colors.green};
+    padding: ${padd};
+  `}
+`;
+
+// -----------------------------------------------------------------
+
+// é possivel herdar outro componente e fazer alterações
+
+export const Container3 = styled(Container)`
+  color: ${({ theme }) => theme.colors.blue}
+`;
+
+// -------------------------------------------------------
+
+// é possivel herdar e alterar atributo de tag do componente
+// Container4 é um article e não div
+
+export const Container4 = styled(Container2).attrs({ as: 'article' })`
+  color: ${({ theme }) => theme.colors.green}
+  margin: 20px;
+`;
+
+
+// -------------------------------------------------------
+
+export const H2 = styled.h2`
+  color: red;
+`;
+
+// é possivel alterar algum componente ou tag filho desse componente
+// OBS: os outros H2 não serão alterados, apenas o que é filho de Container2
+
+export const Container2 = styled.div`
+  ${H2} {
+    color: blue;
+  }
+`;
+
+
+
+
+
+
+
+

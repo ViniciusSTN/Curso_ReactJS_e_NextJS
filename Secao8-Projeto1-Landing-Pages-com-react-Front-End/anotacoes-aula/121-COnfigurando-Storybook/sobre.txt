@@ -1,0 +1,13 @@
+https://storybook.js.org/
+
+npx sb init
+
+cria a pasta stories
+apagar ela
+
+configurar arquivo .storybook
+
+criar arquivo de stories para cada componente
+
+npm run storybook
+

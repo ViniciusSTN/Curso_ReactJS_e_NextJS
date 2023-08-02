@@ -1,0 +1,40 @@
+baixar extensões
+vscode-styled-components
+colorize
+
+npm i styled-components
+
+é possível passar props para o styled-component:
+
+<Styled.Wrapper background="blue">
+  <h1>Hello</h1>
+</Styled.Wrapper>
+
+
+import styled, { css } from 'styled-components';
+export const Wrapper = styled.div`
+  ${(props) => css`
+    background: ${props.background};
+  `}
+`;
+
+nesse caso a props foi background, mas é posssivel passar qualquer props e usar javasscript para fazer códigos e condicionais dentro do styled component
+
+// ---------------------------------------------------------------------
+
+para criar um estilo global:
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyles = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #202124;
+  }
+`;
+
+

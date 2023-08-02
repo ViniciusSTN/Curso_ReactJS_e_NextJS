@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Title = styled.h1`
-  ${({ theme }) => css`
-  color: ${theme.colors.white}
+  ${({ theme, light }) => css`
+    color: ${light ? theme.colors.whiteColor : theme.colors.darkColor};
   `}
 `;

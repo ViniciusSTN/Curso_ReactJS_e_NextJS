@@ -11,3 +11,5 @@ criar arquivo de stories para cada componente
 
 npm run storybook
 
+ajuda a testar o componente
+

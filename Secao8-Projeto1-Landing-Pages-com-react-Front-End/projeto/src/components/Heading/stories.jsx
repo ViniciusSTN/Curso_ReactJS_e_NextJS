@@ -5,11 +5,9 @@ export default {
   component: Heading,
   args: {
     children: 'O texto está escuro',
-    light: false,
   },
   argTypes: {
     children: { type: 'string' },
-    light: { type: 'boolean' },
   },
   parameters: {
     backgrounds: {
@@ -29,5 +27,5 @@ Light.parameters = {
 
 Dark.args = {
   children: 'O texto está claro',
-  light: true,
+  colorDark: false,
 };

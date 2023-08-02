@@ -1,0 +1,22 @@
+em index.jsx
+
+import { GlobalStyles } from './styles/global-styles';
+
+envolver todo o conteudo com o componente ThemeProvider
+
+agora é possivel usar theme={}
+
+<ThemeProvider theme={theme}>
+  <GlobalStyles />
+  <Home />
+</ThemeProvider>,
+
+o theme vem dentro de props para todos os componentes que estejam envolvidos dentro de ThemeProvider
+
+import styled, { css } from 'styled-components';
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.secondaryBg};
+  `}
+`;
+

@@ -1,8 +1,0 @@
-em index.jsx
-
-import { GlobalStyles } from './styles/global-styles';
-
-envolver todo o conteudo com o componente ThemeProvider
-
-agora é possivel usar theme={}
-

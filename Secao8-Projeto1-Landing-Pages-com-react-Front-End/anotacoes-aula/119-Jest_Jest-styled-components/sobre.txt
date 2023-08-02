@@ -1,0 +1,7 @@
+teste da Home
+
+npm i -D jest-styled-components
+
+importar em setupTests.js
+import 'jest-styled-components';
+

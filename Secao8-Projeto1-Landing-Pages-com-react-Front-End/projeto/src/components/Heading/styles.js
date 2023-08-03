@@ -27,9 +27,9 @@ const titleCase = (uppercase) => css`
 `;
 
 export const Title = styled.h1`
-  ${({ theme, colorDark, size, uppercase }) => css`
-    color: ${colorDark ? theme.colors.darkColor : theme.colors.whiteColor};
+  ${({ theme, colordark, size, uppercase }) => css`
+    color: ${colordark ? theme.colors.darkColor : theme.colors.whiteColor};
     ${titleSize[size](theme)};
-    ${titleCase(uppercase)}
+    ${titleCase(uppercase)};
   `}
 `;

@@ -2,18 +2,25 @@ import styled, { css } from 'styled-components';
 
 const titleSize = {
   medium: (theme) => css`
-    font-size: ${theme.font.sizes.medium}
+    font-size: ${theme.font.sizes.medium};
   `,
   big: (theme) => css`
-    font-size: ${theme.font.sizes.large}
+    font-size: ${theme.font.sizes.large};
   `,
   xlarge: (theme) => css`
-    font-size: ${theme.font.sizes.xlarge}
+    font-size: ${theme.font.sizes.xlarge};
   `,
   xhuge: (theme) => css`
-    font-size: ${theme.font.sizes.xhuge}
+    font-size: ${theme.font.sizes.xhuge};
+    ${mediaFont(theme)};
   `,
 };
+
+const mediaFont = (theme) => css`
+  @media ${theme.media.lteMedium} {
+    font-size: ${theme.font.sizes.xlarge};
+  }
+`;
 
 const titleCase = (uppercase) => css`
   text-transform: ${uppercase ? 'uppercase' : 'none'};

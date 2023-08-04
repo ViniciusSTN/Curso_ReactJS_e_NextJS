@@ -1,9 +1,14 @@
 import styled, { css } from 'styled-components';
-import { Title as Heading } from '../Heading/styles';
 import { Container as SectionContainer } from '../SectionContainer/styles';
+import { Title as Heading } from '../Heading/styles';
+
+const menuVisible = (theme) => css`
+  visibility: visible;
+  opacity: 1;
+`;
 
 export const Container = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, visible }) => css`
     position: fixed;
     z-index: 5;
     top: 0;
@@ -26,6 +31,9 @@ export const Container = styled.div`
 
     @media ${theme.media.lteMedium} {
       height: 100vh;
+      visibility: hidden; // nesse caso foi usado visibility e opacity porque é possivel colocar transition, diferente de display: none
+      opacity: 0;
+      ${visible && menuVisible(theme)}
 
       > ${SectionContainer} {
         display: grid;
@@ -33,7 +41,7 @@ export const Container = styled.div`
         grid-template-rows: 1fr;
         height: 100vh;
         align-items: center;
-        overflow-y: auto;  // para a barra de rolagem funcionar
+        overflow-y: auto;
       }
 
       & ${Heading} {
@@ -60,5 +68,29 @@ export const MenuContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  ${({ theme }) => css``}
+  ${({ theme, visible }) => css`
+    z-index: 6;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background: ${theme.colors.darkColor};
+    color: ${theme.colors.whiteColor};
+    border: none;
+    display: none;
+    // quando o menu estiver visível, ao clicar em qualquer coisa o menu é fechado, se ele não estiver visível, apenas clicando no botão para ativar o menu
+    pointer-events: ${visible ? 'none' : 'all'};
+
+    @media ${theme.media.lteMedium} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  `}
 `;

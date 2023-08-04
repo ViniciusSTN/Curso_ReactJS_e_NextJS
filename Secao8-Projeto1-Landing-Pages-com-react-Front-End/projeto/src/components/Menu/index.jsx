@@ -1,19 +1,37 @@
+import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
+import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import P from 'prop-types';
+import { useState } from 'react';
 import { LogoLink } from '../LogoLink';
-import { SectionContainer } from '../SectionContainer';
 import { NavLinks } from '../NavLinks';
+import { SectionContainer } from '../SectionContainer';
 import * as Styled from './styles';
 
 export const Menu = ({ links = [], logoData }) => {
+  const [visible, setVisible] = useState(false);
+
   return (
-    <Styled.Container>
-      <Styled.MenuContainer>
+    <>
+      <Styled.Button
+        visible={visible}
+        onClick={() => setVisible(true)}
+        aria-label="Open/Close Menu"
+      >
+        {visible ? (
+          <CloseIcon aria-label="Close menu" />
+        ) : (
+          <MenuIcon aria-label="Close menu" />
+        )}
+      </Styled.Button>
+      <Styled.Container visible={visible} onClick={() => setVisible(false)}>
         <SectionContainer>
-          <LogoLink {...logoData} />
-          <NavLinks links={links} />
+          <Styled.MenuContainer>
+            <LogoLink {...logoData} />
+            <NavLinks links={links} />
+          </Styled.MenuContainer>
         </SectionContainer>
-      </Styled.MenuContainer>
-    </Styled.Container>
+      </Styled.Container>
+    </>
   );
 };
 

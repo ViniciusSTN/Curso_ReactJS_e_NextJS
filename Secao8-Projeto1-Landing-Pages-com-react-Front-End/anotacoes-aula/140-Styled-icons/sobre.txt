@@ -1,0 +1,4 @@
+npm i @styled-icons/material-outlined
+
+https://styled-icons.dev/
+

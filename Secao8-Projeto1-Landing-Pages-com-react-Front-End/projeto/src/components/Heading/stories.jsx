@@ -5,6 +5,10 @@ export default {
   component: Heading,
   args: {
     children: 'O texto está escuro',
+    colordark: true,
+    uppercase: false,
+    as: 'h1',
+    size: 'big',
   },
   argTypes: {
     children: { type: 'string' },

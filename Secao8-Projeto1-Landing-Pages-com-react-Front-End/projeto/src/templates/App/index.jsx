@@ -1,15 +1,11 @@
 import { GridText } from '../../components/GridText';
 import mock from '../../components/GridText/mock';
+import { Base } from '../Base';
+import { mockBase } from '../Base/stories';
 import * as Styled from './styles';
 
 function App() {
-  return (
-    <div className="App">
-      <Styled.Wrapper>
-        <GridText {...mock} />
-      </Styled.Wrapper>
-    </div>
-  );
+  return <Base {...mockBase} />;
 }
 
 export default App;

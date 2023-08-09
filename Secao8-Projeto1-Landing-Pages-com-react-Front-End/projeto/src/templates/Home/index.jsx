@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { mapData } from '../../api/map-data';
 import { Base } from '../Base';
 import { mockBase } from '../Base/stories';
+import { Loading } from '../Loading';
 import { PageNotFound } from '../PageNotFound';
 
 function App() {
@@ -15,7 +16,6 @@ function App() {
           'http://localhost:1337/api/pages?populate=deep&pagination[pageSize]=1&sort[0]=id:desc',
         );
         const json = await data.json();
-
         const pageData = mapData(json);
 
         setData(() => pageData[0]);
@@ -36,7 +36,7 @@ function App() {
   }
 
   if (data && !data.slug) {
-    return <h1>Carregando...</h1>;
+    return <Loading />;
   }
 
   return <Base {...mockBase} />;

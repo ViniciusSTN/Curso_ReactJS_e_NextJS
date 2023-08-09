@@ -7,6 +7,7 @@ http://localhost:1337/pages
 Adicione "api":
 
 http://localhost:1337/api/pages
+
 Populate (Plugin)
 Outro ponto importante é que Dynamic Zones e componentes não são populados automaticamente, por isso teremos que informar ao Strapi como fazer isso.
 

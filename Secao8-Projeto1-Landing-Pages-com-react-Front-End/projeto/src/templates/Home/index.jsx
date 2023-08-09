@@ -28,7 +28,7 @@ function Home() {
 
       try {
         const data = await fetch(
-          `http://localhost:1337/api/pages?populate=deep`,
+          `http://localhost:1337/api/pages/?populate=deep`,
         );
         const json = await data.json();
         const { attributes } = json.data[0];

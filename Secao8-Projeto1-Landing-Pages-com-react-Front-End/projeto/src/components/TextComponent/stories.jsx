@@ -4,18 +4,20 @@ export default {
   title: 'TextComponent',
   component: TextComponent,
   args: {
-    children:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quod porro minus similique, soluta nam doloribus, aliquid ab quo culpa ut illum deleniti veritatis deserunt odio doloremque, molestiae atque nobis.',
+    children: `
+      Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Nihil, iure quaerat! Voluptates ducimus exercitationem,
+      reprehenderit laborum, libero cum porro necessitatibus sint incidunt,
+      praesentium ipsa quaerat debitis delectus nemo aliquid! Facere.
+    `,
   },
   argTypes: {
     children: { type: 'string' },
   },
 };
 
-export const Template = (args) => {
-  return (
-    <div>
-      <TextComponent {...args} />
-    </div>
-  );
-};
+export const Template = (args) => (
+  <div>
+    <TextComponent {...args} />
+  </div>
+);

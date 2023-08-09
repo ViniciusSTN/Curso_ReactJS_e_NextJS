@@ -1,10 +1,10 @@
 import P from 'prop-types';
-import { Heading } from '../Heading';
 import * as Styled from './styles';
+import { Heading } from '../Heading';
 
 export const LogoLink = ({ text, srcImg = '', link }) => {
   return (
-    <Heading size="medium" uppercase>
+    <Heading size="small" uppercase>
       <Styled.Container href={link}>
         {!!srcImg && <img src={srcImg} alt={text} />}
         {!srcImg && text}

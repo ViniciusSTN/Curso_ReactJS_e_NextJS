@@ -4,28 +4,21 @@ export default {
   title: 'LogoLink',
   component: LogoLink,
   args: {
-    text: 'LogoLink',
-    srcImg: 'assets/images/logo.svg',
-    link: 'http://google.com',
+    text: 'Logo',
+    srcImg: '',
+    link: 'http://localhost',
+  },
+  argTypes: {
+    text: { type: 'string' },
+    srcImg: { type: 'string' },
+    link: { type: 'string' },
   },
 };
 
-export const ImageOnly = (args) => {
+export const Template = (args) => {
   return (
     <div>
       <LogoLink {...args} />
     </div>
   );
-};
-
-export const TextOnly = (args) => {
-  return (
-    <div>
-      <LogoLink {...args} />
-    </div>
-  );
-};
-
-TextOnly.args = {
-  srcImg: '',
 };

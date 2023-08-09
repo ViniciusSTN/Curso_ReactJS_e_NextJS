@@ -8,16 +8,20 @@ export default {
       <div>
         <h1>SectionBackground</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-          voluptates molestias asperiores necessitatibus, autem nemo ab, fugiat,
-          beatae possimus odio enim magnam assumenda mollitia provident et eaque
-          similique exercitationem delectus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem et
+          deleniti laudantium mollitia aspernatur, ullam iure quasi! Incidunt
+          culpa unde sapiente. Facilis corrupti quod ex voluptatem similique
+          placeat nulla inventore!
         </p>
       </div>
     ),
+    background: true,
   },
   argTypes: {
-    children: { type: 'string' },
+    children: {
+      table: { disable: true },
+    },
+    background: { type: 'boolean' },
   },
 };
 

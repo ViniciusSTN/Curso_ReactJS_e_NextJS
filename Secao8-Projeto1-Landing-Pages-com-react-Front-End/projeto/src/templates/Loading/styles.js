@@ -18,9 +18,10 @@ export const Container = styled.div`
     bottom: 0;
     right: 0;
     z-index: 10;
-    background-color: ${theme.colors.darkColor};
+    background-color: ${theme.colors.primaryColor};
 
-    &::before, &::after {
+    &:before,
+    &:after {
       content: '';
       position: absolute;
       top: 50%;
@@ -32,12 +33,20 @@ export const Container = styled.div`
       border-radius: 50%;
     }
 
-    &::after {
+    &:after {
       width: 6rem;
       height: 6rem;
-      border-left: 0.5rem solid ${theme.colors.whiteColor};
-      border-top: 0.5rem solid ${theme.colors.whiteColor};
-      animation: ${rotate()} 1s linear infinite;
+      border-left: 0.5rem solid ${theme.colors.secondaryColor};
+      border-top: 0.5rem solid ${theme.colors.secondaryColor};
+      animation: ${rotate()} 600ms linear infinite;
+    }
+
+    &:before {
+      width: 2rem;
+      height: 2rem;
+      border-left: 0.5rem solid ${theme.colors.secondaryColor};
+      border-top: 0.5rem solid ${theme.colors.secondaryColor};
+      animation: ${rotate()} 1s linear reverse infinite;
     }
   `}
 `;

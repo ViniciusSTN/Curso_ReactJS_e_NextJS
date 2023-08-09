@@ -1,17 +1,20 @@
-import { GridTwoColumns } from '.';
+import { GridTwoColum } from '.';
 
-import argsMock from './argsMock';
+import mock from './mock';
 
 export default {
-  title: 'GridTwoColumns',
-  component: GridTwoColumns,
-  args: argsMock,
+  title: 'GridTwoColum',
+  component: GridTwoColum,
+  args: mock,
+  argTypes: {
+    children: { type: 'string' },
+  },
 };
 
 export const Template = (args) => {
   return (
     <div>
-      <GridTwoColumns {...args} />
+      <GridTwoColum {...args} />
     </div>
   );
 };

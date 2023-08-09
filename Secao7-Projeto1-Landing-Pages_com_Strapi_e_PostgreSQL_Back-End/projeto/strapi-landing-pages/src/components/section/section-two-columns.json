@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_section_sections_two_columns",
+  "collectionName": "components_section_section_two_columns",
   "info": {
-    "displayName": "sections_two_columns",
-    "icon": "medium"
+    "displayName": "section_two_columns",
+    "icon": "address-book"
   },
   "options": {},
   "attributes": {

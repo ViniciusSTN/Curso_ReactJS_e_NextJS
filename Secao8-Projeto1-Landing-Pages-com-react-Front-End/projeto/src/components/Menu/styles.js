@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
 import { Title as Heading } from '../Heading/styles';
 
-const menuVisible = (theme) => css`
+const menuVisible = () => css`
   visibility: visible;
   opacity: 1;
 `;
@@ -16,7 +16,7 @@ export const Container = styled.div`
     right: 0;
     width: 100%;
     border-bottom: ${theme.colors.mediumGray};
-    background: ${theme.colors.whiteColor};
+    background: ${theme.colors.white};
     transition: all 300ms ease-in-out;
 
     > ${SectionContainer} {
@@ -31,7 +31,7 @@ export const Container = styled.div`
 
     @media ${theme.media.lteMedium} {
       height: 100vh;
-      visibility: hidden; // nesse caso foi usado visibility e opacity porque é possivel colocar transition, diferente de display: none
+      visibility: hidden;
       opacity: 0;
       ${visible && menuVisible(theme)}
 
@@ -75,11 +75,10 @@ export const Button = styled.button`
     right: 2rem;
     width: 4rem;
     height: 4rem;
-    background: ${theme.colors.darkColor};
-    color: ${theme.colors.whiteColor};
+    background: ${theme.colors.primaryColor};
+    color: ${theme.colors.white};
     border: none;
     display: none;
-    // quando o menu estiver visível, ao clicar em qualquer coisa o menu é fechado, se ele não estiver visível, apenas clicando no botão para ativar o menu
     pointer-events: ${visible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {

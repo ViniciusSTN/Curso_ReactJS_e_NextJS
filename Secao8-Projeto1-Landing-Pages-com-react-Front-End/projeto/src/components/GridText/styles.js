@@ -26,7 +26,7 @@ export const Grid = styled.div`
 `;
 
 export const GridElement = styled.div`
-  ${({ theme }) => css`
+  ${() => css`
     ${HeadingContainer} {
       position: relative;
       left: 5rem;
@@ -40,6 +40,6 @@ export const GridElement = styled.div`
       top: -3rem;
       left: -5rem;
       transform: rotate(5deg);
-    };
+    }
   `}
 `;

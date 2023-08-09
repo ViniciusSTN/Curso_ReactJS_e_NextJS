@@ -8,10 +8,10 @@ export default {
       <div>
         <h1>SectionContainer</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
-          doloremque inventore eligendi doloribus, delectus quia ducimus quod
-          nisi nemo eos perferendis facere aliquam obcaecati pariatur, libero
-          hic rem nulla magni.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem et
+          deleniti laudantium mollitia aspernatur, ullam iure quasi! Incidunt
+          culpa unde sapiente. Facilis corrupti quod ex voluptatem similique
+          placeat nulla inventore!
         </p>
       </div>
     ),

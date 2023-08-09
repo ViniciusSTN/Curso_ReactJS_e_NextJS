@@ -1,0 +1,4 @@
+abrir projeto strapi
+
+npm run develop
+

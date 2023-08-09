@@ -8,7 +8,7 @@ export const Container = styled.a`
     color: inherit; // herda do título
 
     > img {
-      max-height: 2.1rem;
+      height: 3rem;
     }
   `}
 `;

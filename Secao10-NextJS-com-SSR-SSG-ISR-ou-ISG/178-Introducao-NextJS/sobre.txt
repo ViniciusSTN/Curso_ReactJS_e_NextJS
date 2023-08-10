@@ -1,0 +1,20 @@
+REACT
+
+SPA (Single page application) 
+CSR (Client side rendering) -> renderiza no navegador do cliente
+
+
+// -------------------------------------------------------------------
+
+NextJS
+
+SSG (static site generation) -> (ESTÁTICO)
+pré render pages: a página é renderizada no servidor e não sofre re-renderização
+
+SSR (server side rendering) -> (DINÂMICO)
+a renderização acontece no servidor no momento que o usuário fizer requisição (afeta a performance) -> geralmente usado para quando algo precisa ser renderizado em pouco instante
+
+ISG / ISR (Incremental static generation/regeneration) (estático-dinamico)
+pré renderiza páginas em um periodo determinado
+ex: 10 mil requisições para 100 re-renderizações
+

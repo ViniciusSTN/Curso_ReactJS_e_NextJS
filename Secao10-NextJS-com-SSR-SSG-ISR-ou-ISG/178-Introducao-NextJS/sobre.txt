@@ -12,7 +12,8 @@ SSG (static site generation) -> (ESTÁTICO)
 pré render pages: a página é renderizada no servidor e não sofre re-renderização
 
 SSR (server side rendering) -> (DINÂMICO)
-a renderização acontece no servidor no momento que o usuário fizer requisição (afeta a performance) -> geralmente usado para quando algo precisa ser renderizado em pouco instante
+a renderização acontece no servidor no momento que o usuário fizer requisição (afeta a performance) -> geralmente 
+usado para quando algo precisa ser renderizado em pouco instante
 
 ISG / ISR (Incremental static generation/regeneration) (estático-dinamico)
 pré renderiza páginas em um periodo determinado

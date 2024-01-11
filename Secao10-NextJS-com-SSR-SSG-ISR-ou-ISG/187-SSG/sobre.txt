@@ -1,0 +1,10 @@
+O next se difere do react ao fazer o fetch de dados
+
+getStaticProps (Static Generation)
+getStaticPaths (Static Generation com rotas dinâmicas)
+getServerSideProps (Sever-side Rendering)
+
+
+npm start (next start) precisa de um servidor node rodando
+
+next Imagem não funciona com SSG

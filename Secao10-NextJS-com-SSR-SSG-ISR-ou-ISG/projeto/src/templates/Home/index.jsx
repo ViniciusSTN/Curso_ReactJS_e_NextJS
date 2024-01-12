@@ -1,19 +1,9 @@
-import { useEffect, useState } from 'react';
-
-import * as Styled from './styles';
-
-import { mapData } from '../../api/map-data';
-
-import { Heading } from '../../components/Heading';
 import { GridTwoColumns } from '../../components/GridTwoColumns';
 import { GridContent } from '../../components/GridContent';
 import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
 
-import { mockBase } from '../Base/mock';
 import { Base } from '../Base';
-import { PageNotFound } from '../PageNotFound';
-import { Loading } from '../Loading';
 
 import config from '../../config';
 
@@ -54,10 +44,6 @@ function Home({ data }) {
   //     document.title = `${data.title} | ${config.siteName}`;
   //   }
   // }, [data]);
-
-  if (!data || data.length !== 1) {
-    return <PageNotFound />;
-  }
 
   // if (data && !data.slug) {
   //   return <Loading />;

@@ -1,0 +1,22 @@
+npm run build
+npm start
+
+Paginas estaticas (SSG) não precisam de servidor node
+Obs: é preciso adicionar ...
+
+output: 'export', 
+
+... em next.config.js 
+e fazer a build. isso gera um arquivo out que será usado como export
+(Não é preciso mais rodar next export como era nas versões antigas)
+
+Para testar:
+Basta entrar na pasta out -> cd out
+Criar um servidor com python -> python -m http.server 
+(ou python3 -m http.server se estiver no linux)
+
+
+OBS: O next gera o maximo de conterudo html possivel, algumas coisas
+ainda vão ser javascript, como por exemplo funcionamento de botões
+Então mesmo que desative o javascript no navegador, o conteúdo da página
+ainda vai ser html, entretanto as interações só é possível por conta do JS
